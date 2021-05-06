@@ -1,0 +1,3 @@
+Senha e email para entrar no sistema de login do site
+email: administrador@gmail.com
+senha: 123456
