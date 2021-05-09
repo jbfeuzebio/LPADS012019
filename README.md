@@ -34,9 +34,9 @@
 				<td><h3>Cadastro de usuário</h3></td>
 			</tr>
 			<tr>
-				<td><img src="/img/printssitema/loja.png"/></td>
-				<td><img src="/img/printssitema/login.png"/></td>
-				<td><img src="/img/printssitema/register.png"/></td>
+				<td><img src="/imagens/printssitema/loja.png"/></td>
+				<td><img src="/imagens/printssitema/login.png"/></td>
+				<td><img src="/imagens/printssitema/register.png"/></td>
 			</tr>
 			<tr>
 				<td><h3>Gerenciar produtos</h3></td>
@@ -44,8 +44,8 @@
 				<td><h3>Editar Produto</h3></td>
 			</tr>
 			<tr>
-				<td><img src="/img/printssitema/gerenciaProduto.png"/></td>
-				<td><img src="/img/printssitema/gerenciaProdutoCadastra.png"/></td>
-				<td><img src="/img/printssitema/gerenciaProdutoEditar.png"/></td>
+				<td><img src="/imagens/printssitema/gerenciaProduto.png"/></td>
+				<td><img src="/imagens/printssitema/gerenciaProdutoCadastra.png"/></td>
+				<td><img src="/imagens/printssitema/gerenciaProdutoEditar.png"/></td>
 			</tr>
 			</table> 
