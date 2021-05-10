@@ -3,9 +3,10 @@
 
 CREATE TABLE USUARIOS(
     id_usuario int NOT NULL AUTO_INCREMENT,
-    nivel_hierarquico int,
+    nome varchar(255) NOT NULL,
+    email varchar(255) NOT NULL UNIQUE,    
     senha varchar(255) NOT NULL,
-    email varchar(255) NOT NULL UNIQUE,
+    nivel_hierarquico int,
     PRIMARY KEY (id_usuario)
 );
 
