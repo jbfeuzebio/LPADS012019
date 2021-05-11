@@ -1,8 +1,6 @@
 <?php 
 defined('BASEPATH') OR exit('No direct script access allowed');
 class Usuario{
-
-private 
     private $db;
     private $nivel_hierarquico;
     private $nome;
@@ -21,18 +19,20 @@ private
 
     public function registrar($dados){
         $auxquery['email'] = $dados['email'];
-        $query = $this->db->get_where('usuarios',array('email' = $auxquery));
+        $this->db->where($auxquery);
+        $query = $this->db->get('usuarios');
 
         if($query->num_rows() > 0){
             return null;
             }else{ 
-            $aux['nivel_hierarquico'] = $data['nivel_hierarquico'];
-            $aux['nome'] = $data['nome'];
-            $aux['email']= $data['email'];
-            $aux['senha']= md5($data['senha']);
+            $aux['nivel_hierarquico'] = $dados['nivel_hierarquico'];
+            $aux['nome'] = $dados['nome'];
+            $aux['email']= $dados['email'];
+            $aux['senha']= md5($dados['senha']);
             $this->db->insert('usuarios',$aux);
             return $this->db->insert_id();
     }
+}
 
     public function login(){}
 
