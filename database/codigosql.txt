@@ -6,17 +6,20 @@ CREATE TABLE USUARIOS(
     nome varchar(255) NOT NULL,
     email varchar(255) NOT NULL UNIQUE,    
     senha varchar(255) NOT NULL,
-    nivel_hierarquico int,
+    nivel_hierarquico int DEFAULT 0,
+    CHECK(nivel_hierarquico IN(0,55)),
     PRIMARY KEY (id_usuario)
 );
 
 CREATE TABLE PRODUTOS(
     id_produto int NOT NULL AUTO_INCREMENT,
     categoria_produto varchar(255) NOT NULL,
-    qtd_produto_estoque int NOT NULL,
+    qtd_produto_estoque int NOT NULL DEFAULT 0,
+    CHECK(qtd_produto_estoque >= 0),
     nome_prod varchar(255),
     descricao_produto varchar(1025),
     preco float NOT NULL,
+    CHECK(preco >= 0.00),
     PRIMARY KEY (id_produto)
 );
 
@@ -24,18 +27,10 @@ CREATE TABLE IMAGENSPRODUTOS(
     id_imagem int NOT NULL AUTO_INCREMENT,
     nome_imagem varchar(255) NOT NULL,
     tipo_imagem varchar(255) NOT NULL,
+    CHECK(tipo_imagem IN ('jpg','png','svg','jpeg')),
     tamanho_imagem varchar(255) NOT NULL,
     imagem longblob NOT NULL,
     id_produto int NOT NULL,
     PRIMARY KEY(id_imagem),
     FOREIGN KEY(id_produto) REFERENCES PRODUTOS(id_produto)
 )
-
-#Criacao das constraints
-
-ALTER TABLE produtos ALTER qtd_produto_estoque SET DEFAULT 0
-ALTER TABLE usuarios ALTER nivel_hierarquico SET DEFAULT 0
-ALTER TABLE produtos ADD CONSTRAINT CHK_produtos_qtd_produto_estoque CHECK(qtd_produto_estoque >= 0)
-ALTER TABLE produtos ADD CONSTRAINT CHK_produtos_preco CHECK(preco >= 0.00)
-ALTER TABLE produtos ADD CONSTRAINT CHK_usuarios_nivel_hierarquico CHECK(nivel_hierarquico IN (0,55))
-ALTER TABLE imagensprodutos ADD CONSTRAINT CHK_imagensprodutos_tipo_imagem CHECK(tipo_imagem IN ('jpg','png','svg','jpeg'))
