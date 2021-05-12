@@ -21,7 +21,7 @@ class UsuarioModel extends CI_model{
                 $usuario_logado = $this->session->userdata('usuario');
                 $nivel_hierarquico = $usuario_logado['nivel_hierarquico'];
                 if ($nivel_hierarquico === 55){
-                    
+                    redirect('ControllerLoja/cadastrar_usuario_controle');
                 }if ($nivel_hierarquico == 0) {
                     redirect('ControllerLoja/loja');
                 }else {
@@ -61,6 +61,12 @@ class UsuarioModel extends CI_model{
     }
     }
 
+    public function validar_nivel_hierarquico($nivel){
+        $usuario_logado =  $this->session->userdata('usuario');
+        if ($usuario_logado['nivel_hierarquico'] != $nivel){
+            redirect('ControllerLoja/forbidden');
+        }
+     }
 
 }
 

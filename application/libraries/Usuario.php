@@ -49,9 +49,12 @@ class Usuario{
         }
     }
 
+    public function validar_nivel($nivel,$usuario_logado){
+       if ($usuario_logado['nivel_hierarquico'] != $nivel){
+           return null;
+       }
+    }
+    
 
 }
-
-
-
 ?>

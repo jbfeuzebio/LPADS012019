@@ -8,6 +8,9 @@ class ControllerLoja extends CI_Controller {
 	}
 
 	public function loja(){
+		$this->load->helper('url');
+		$this->usuarioModel->validar_nivel_hierarquico(55);
+		$this->load->view('componentes/teste');
 
 	}
 	
@@ -28,6 +31,11 @@ class ControllerLoja extends CI_Controller {
 		$this->load->view('componentes/teste_login');
 		$this->usuarioModel->validar_login();
 
+	}
+
+	public function forbidden(){
+		$this->load->helper("url");
+		$this->load->view('errors/index');
 	}
 
 
