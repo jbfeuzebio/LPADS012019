@@ -34,7 +34,20 @@ class Usuario{
     }
 }
 
-    public function login(){}
+    public function login($dados){
+        $auxquey['email'] = $dados['email'];
+        $auxquery['senha'] = md5($dados['senha']);
+        $this->db->where($auxquery);
+        $query = $this->db->get('usuarios');
+
+        if($query->num_rows() > 0){
+        foreach ($query->result_array() as $row){
+            return $row;
+        }
+        }else{
+             return null;
+        }
+    }
 
 
 }

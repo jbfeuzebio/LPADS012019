@@ -18,12 +18,12 @@ class UsuarioModel extends CI_model{
 
             if($usuario_logado !== null){
                 $this -> session-> set_userdata('usuario', $usuario_logado);
-                $usuario_logado = $this->session->user_data('usuario');
+                $usuario_logado = $this->session->userdata('usuario');
                 $nivel_hierarquico = $usuario_logado['nivel_hierarquico'];
                 if ($nivel_hierarquico === 55){
                     
                 }if ($nivel_hierarquico == 0) {
-                    
+                    redirect('ControllerLoja/loja');
                 }else {
 
                 }

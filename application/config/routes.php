@@ -53,4 +53,5 @@ $route['default_controller'] = 'ControllerLoja';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['cadastrarusuario'] = "ControllerLoja/cadastra_usuario";
+$route['cadastrarusuario_controle'] = "ControllerLoja/cadastrar_usuario_controle";
 $route['login'] = "ControllerLoja/login";

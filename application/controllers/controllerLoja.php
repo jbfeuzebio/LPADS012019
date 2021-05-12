@@ -17,5 +17,18 @@ class ControllerLoja extends CI_Controller {
 		$this->usuarioModel->registrar_usuario();
 		}
 
+	public function cadastrar_usuario_controle(){
+		$this->load->helper('url');
+		$this->load->view('componentes/teste');
+		$this->usuarioModel->registrar_usuario();
+		}
+
+	public function login_usuario(){
+		$this->load->helper("url");
+		$this->load->view('componentes/teste_login');
+		$this->usuarioModel->validar_login();
+
+	}
+
 
 }
