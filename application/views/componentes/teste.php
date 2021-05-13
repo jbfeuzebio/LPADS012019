@@ -22,5 +22,7 @@
         <button >Registrar</button>
 
     </form>
+
+    <a href="<?= base_url('ControllerLoja/editar_usuario') ?>">editar usuario</a>
 </body>
 </html>

@@ -6,15 +6,37 @@ class Usuario{
     private $nome;
     private $email;
     private $senha;
+    private $id_usuario;
 
-    public function __construct($nivel_hierarquico = null,$nome = null,$email = null, $senha = null){
+    public function __construct($nivel_hierarquico = null,$nome = null,$email = null, $senha = null, $id_usuario = null){
         $this-> nivel_hierarquico = $nivel_hierarquico;
         $this-> nome = $nome;
         $this-> email = $email;
         $this-> senha = $senha;
+        $this-> id_usuario = $id_usuario;
 
         $ci = get_instance();
         $this->db = $ci->db;
+    }
+
+    public function get_nivel_hierarquico(){
+        return $this->nivel_hierarquico;
+    }
+
+    public function get_nome(){
+        return $this->nome;
+    }
+    
+    public function get_email(){
+        return $this->email;
+    }
+    
+    public function get_senha(){
+        return $this->senha;
+    }
+
+    public function get_id_usuario(){
+        return $this->id_usuario;
     }
 
     public function registrar($dados){
@@ -49,10 +71,16 @@ class Usuario{
         }
     }
 
-    public function validar_nivel($nivel,$usuario_logado){
-       if ($usuario_logado['nivel_hierarquico'] != $nivel){
-           return null;
-       }
+    public function alterar($dados){
+        $auxquery['id_usuario'] = $dados['id_usuario'];
+        $this->db->where($auxquery);
+        $this->db->update('usuarios', $dados);
+        return true;
+    }
+
+    public function deletar($id){
+        $this->db->delete('usuarios',array('id_usuario'=> $id));
+        return true;
     }
     
 
