@@ -18,6 +18,13 @@ class ControllerLoja extends CI_Controller {
 		$this->load->view('componentes/teste');
 		$this->usuarioModel->registrar_usuario();
 	}
+	
+	public function cadastra_produto(){
+		$this->load->model('ProdutoModel','produtoModel');
+		$this->load->helper('url');
+		$this->load->view('componentes/testeProduto');
+		$this->produtoModel->cadastra_produto();
+	}
 
 	public function editar_usuario(){
 		$this->load->helper('url');
