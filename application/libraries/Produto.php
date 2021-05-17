@@ -22,8 +22,8 @@
             $this->db = $ci->db;
         }
 
-        public function insere_produto($dados){
-            $this->db->insert('produtos', $dados);
+        public function insere_produto($dados_produto){
+            $this->db->insert('produtos', $dados_produto);
             return $this->db->insert_id();
         }
 

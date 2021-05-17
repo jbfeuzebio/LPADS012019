@@ -7,7 +7,7 @@
 <body>
     <header>
     </header>
-    <form method="POST" action="<?= base_url('ControllerLoja/cadastra_produto') ?>">
+    <form method="POST" enctype="multipart/form-data" action="<?= base_url('ControllerLoja/cadastra_produto') ?>">
   
         <input type="text" id="Nome_prod" name="nome_prod" placeholder="Nome Produto">
  
@@ -18,6 +18,8 @@
         <input type="number" id="Preco" name="preco" placeholder="Preço">
 
         <input type="number" id="Qtd_prod" name="qtd_produto_estoque" placeholder="Quantidade produto estoque:">
+
+        <input type="file" name="imagem" >
    
 
         <button >Registrar</button>

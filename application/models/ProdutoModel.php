@@ -1,6 +1,7 @@
 <?php 
 defined('BASEPATH') OR exit('No direct script access allowed');
 include APPPATH . 'libraries/Produto.php';
+include APPPATH . 'libraries/Imagem.php';
 
 class ProdutoModel extends CI_model{
 
@@ -16,9 +17,27 @@ class ProdutoModel extends CI_model{
 
         if($this-> form_validation-> run()){
             echo"<script language='javascript' type='text/javascript'>alert('form validado');</script>";
-            $dados = $this -> input -> post();
+            $dados_produto = $this -> input -> post();
             $produto = new Produto();
-            $resultado = $produto -> insere_produto($dados);
+            $id_produto = $produto -> insere_produto($dados_produto);
+            $imagem = new Imagem();
+            $dados_imagem = array (
+                'id_produto' => $id_produto,
+                'nome_imagem' => $_FILES['imagem']['name'],
+                'tamanho_imagem' => $_FILES['imagem']['size'],
+                'tipo_imagem' => $_FILES['imagem']['type'],
+            );
+            $config = array(
+                'upload_path'   => './imagens/produtos',
+                'allowed_types' => 'gif|jpg|jpeg',
+            );
+            $this->load->library('upload');
+            $this->upload->initialize($config);
+            $this->upload->do_upload('imagem');
+            $imagem -> insere_imagem_produto($dados_imagem);
+            if ($id_produto = null || $id_produto = null){
+                echo"<script language='javascript' type='text/javascript'>alert('inserido');</script>";    
+            }
         }else {
             echo"<script language='javascript' type='text/javascript'>alert('form NAO validado');</script>";
         }
