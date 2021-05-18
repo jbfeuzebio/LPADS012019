@@ -26,10 +26,7 @@ CREATE TABLE PRODUTOS(
 CREATE TABLE IMAGENSPRODUTOS(
     id_imagem int NOT NULL AUTO_INCREMENT,
     nome_imagem varchar(255) NOT NULL,
-    tipo_imagem varchar(255) NOT NULL,
-    CHECK(tipo_imagem IN ('jpg','png','svg','jpeg')),
     tamanho_imagem varchar(255) NOT NULL,
-    imagem longblob NOT NULL,
     id_produto int NOT NULL,
     PRIMARY KEY(id_imagem),
     FOREIGN KEY(id_produto) REFERENCES PRODUTOS(id_produto)

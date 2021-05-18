@@ -20,12 +20,11 @@ class ProdutoModel extends CI_model{
             $dados_produto = $this -> input -> post();
             $produto = new Produto();
             $id_produto = $produto -> insere_produto($dados_produto);
-            $imagem = new Imagem();
+          
             $dados_imagem = array (
                 'id_produto' => $id_produto,
-                'nome_imagem' => $_FILES['imagem']['name'],
+                'nome_imagem' => './imagens/produtos'.$_FILES['imagem']['name'],
                 'tamanho_imagem' => $_FILES['imagem']['size'],
-                'tipo_imagem' => $_FILES['imagem']['type'],
             );
             $config = array(
                 'upload_path'   => './imagens/produtos',
@@ -34,8 +33,9 @@ class ProdutoModel extends CI_model{
             $this->load->library('upload');
             $this->upload->initialize($config);
             $this->upload->do_upload('imagem');
-            $imagem -> insere_imagem_produto($dados_imagem);
-            if ($id_produto = null || $id_produto = null){
+            $imagem = new Imagem();
+            $id_imagem = $imagem -> insere_imagem_produto($dados_imagem);
+            if ($id_imagem != null || $id_produto != null){
                 echo"<script language='javascript' type='text/javascript'>alert('inserido');</script>";    
             }
         }else {
