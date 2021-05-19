@@ -8,9 +8,10 @@ class ControllerLoja extends CI_Controller {
 	}
 
 	public function loja(){
+		$this->load->model('ProdutoModel','produtoModel');
 		$this->load->helper('url');
-		$this->usuarioModel->validar_nivel_hierarquico(0);
-		$this->load->view('componentes/teste');
+		$dados['lista_produtos'] = $this->produtoModel->get_todos_produtos();
+		$this->load->view('componentes/teste', $dados);
 	}
 	
 	public function cadastra_usuario(){

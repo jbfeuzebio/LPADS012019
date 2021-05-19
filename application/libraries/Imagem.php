@@ -25,7 +25,11 @@
             return $id_imagem;
         }
 
-        
+        public function get_todas_imagens_produtos(){
+            $query_imagens_produto = $this->db->get('imagensprodutos');
+            $lista_imagens_produtos = $query_imagens_produto -> result();
+            return $lista_imagens_produtos;
+        }
     }
 
 ?>
