@@ -5,6 +5,25 @@
 		<p>O Front-End não era o objetivo  do trabalho, entretanto agora o utilizarei como uma forma de demonstrar meu progresso e conhecimentos como desenvolvedor</p>
 		</br>
 	<center>
+		<h2>Funções na versão atual</h2>
+	</center>
+		<ul type="square">
+			<li>CRUD usuarios</li>
+			<li>CRUD produtos, com manipulação de imagem</li>
+			<li>Sistema de Login</li>
+		</ul>
+	<center>
+		<h2>Tecnologias utilizadas - Versão atual</h2>
+</center>
+		<ul type="square">
+			<li>CodeIgniter 3</li>
+			<li>Java Script</li>
+			<li>CSS3</li>
+			<li>HTML5</li>
+			<li>MySQL</li>
+		</ul>
+	<br/>
+	<center>
 		<h2>Funções na versão antiga</h2>
 	</center>
 		<ul type="square">
