@@ -16,6 +16,9 @@ class ProdutoModel extends CI_model{
         $this->form_validation->set_rules('preco', 'Preco', 'required');
 
         if($this-> form_validation-> run()){
+                  $dados_produto = $this -> input -> post();
+            $produto = new Produto();
+            $id_produto = $produto -> insere_produto($dados_produto);
             $dados_imagem = array (
                 'id_produto' => $id_produto,
                 'nome_imagem' => './imagens/produtos/'.$_FILES['imagem']['name'],
@@ -29,12 +32,13 @@ class ProdutoModel extends CI_model{
             $this->upload->initialize($config);
             $result = $this->upload->do_upload('imagem');
             if($result == false){
-                echo"<script language='javascript' type='text/javascript'>history.go(-1)</script>";
+                $result = $produto -> deletar_produto($id_produto);
+                if($result == true);
+                echo"<script language='javascript' type='text/javascript'>alert('selecione uma imagem')</script>";
+                return;
             }
             echo"<script language='javascript' type='text/javascript'>alert('form validado');</script>";
-            $dados_produto = $this -> input -> post();
-            $produto = new Produto();
-            $id_produto = $produto -> insere_produto($dados_produto);
+      
             $imagem = new Imagem();
             $id_imagem = $imagem -> insere_imagem_produto($dados_imagem);
             if ($id_imagem != null || $id_produto != null){

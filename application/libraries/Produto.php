@@ -37,6 +37,8 @@
                     $id_produto_imagem = $imagem->id_produto;
                     if($id_produto_imagem == $id_prod){
                         $produto -> nome_imagem = $imagem->nome_imagem;
+                    }else{
+                        $produto -> nome_imagem = './imagens/produtos/default_produto.jpg';
                     }
                 }
                 $html .= $this->exibe_produto($produto);
@@ -52,6 +54,11 @@
                     <h5>'.$produto->descricao_produto.'</h5> 
                     ' ;
             return $html;
+        }
+
+        public function deletar_produto($id_produto){
+            $this->db->delete('produtos', array('id_produto' => $id_produto));
+            return true;
         }
 
     }
