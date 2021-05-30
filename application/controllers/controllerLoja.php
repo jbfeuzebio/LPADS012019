@@ -11,7 +11,11 @@ class ControllerLoja extends CI_Controller {
 		$this->load->model('ProdutoModel','produtoModel');
 		$this->load->helper('url');
 		$dados['lista_produtos'] = $this->produtoModel->get_todos_produtos();
+		$this->load->view('componentes/head');
+		$this->load->view('componentes/header');
+		$this->load->view('componentes/nav');
 		$this->load->view('componentes/teste', $dados);
+		$this->load->view('componentes/footer');
 	}
 	
 	public function cadastra_usuario(){
