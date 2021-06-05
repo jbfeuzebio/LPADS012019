@@ -1,0 +1,91 @@
+section .sessaoProdutos{
+    margin-top: 2vh;
+}
+
+.gridProdutos{
+    display: grid;
+}
+
+.cardProduto{
+    background-color: rgba(230, 230, 230, 0.384);
+    max-width: 30vh;
+    margin: 2vh;
+    box-shadow: 0 0 2vh 0 rgba(0, 0, 0, 0.37);
+    transition: 0.3s;
+    position: relative;
+    
+}
+
+.cardProduto:hover{
+    box-shadow: 0 0 2vh 0 #0fa;
+    border: .09vh solid rgba(0, 255, 170, 0.568);
+    border-radius: 0.25em;
+}
+
+.cardProduto img{
+    max-width: 30vh;
+    max-height: 35vh;
+}
+
+.infoProduto{
+    display:flex;
+    justify-content: center;
+    position: relative;
+    padding: 1vh 0;
+}
+
+.nomeProduto{
+    color:black;
+    font-size: 2vh;
+    font-family: monospace;
+    position: absolute;
+}
+
+.precoProduto{
+    position: absolute;
+    top: 3vh;
+    color:rgba(43, 43, 43, 0.788);
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.botoes{
+    position: relative;
+    padding: 3vh 0;
+
+}
+
+.botoes .botaoProduto{
+    width:50%;
+    border: 0vh;
+    position:absolute;
+    bottom: 0vh;
+    padding: 1vh 0;
+    font-size: 1.5vh;
+    color: white;
+    font-family: monospace;
+}
+
+#comprar{
+    left: 0px;
+    background-color: black;
+    transition: 0.2s;
+}
+
+#comprar:hover{
+    left: 0px;
+    background-color: #0fa;
+    color: white;
+    text-shadow: 0 0 2vh 0 white;
+    box-shadow: 0 0 3vh 0 #0fa;
+}
+
+#detalhes{
+    right: 0px;
+    background-color: rgb(83, 83, 83);
+}
+#detalhes:hover{
+  color: black;
+  box-shadow: 0 0 1vh 0 black;
+}
+

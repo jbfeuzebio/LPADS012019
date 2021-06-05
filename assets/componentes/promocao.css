@@ -1,0 +1,63 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-size: 2.0vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.containerPromocao{
+    margin-top: 4vh;
+    position: relative;
+  
+}
+
+.containerPromocao .promocao{
+    border-top: .01vh solid rgba(233, 233, 233, 0.39);
+    border-bottom: .01vh solid rgba(233, 233, 233, 0.39);
+}
+
+.promocao img{
+    width: 100vw;
+}
+
+.promocao{
+    display: none;
+}
+
+.center{
+    text-align: center;
+    margin-top: -3vh;
+}
+
+.botaoPonto{
+ 
+ cursor: pointer;
+  height: .6vw;
+  width: .6vw;
+  margin: 0 1vh;
+  background-color: rgb(143, 143, 143);
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+}
+
+.ativo, .botaoPonto:hover{
+    border:1px solid rgba(255, 255, 255, 0.849);
+    background-image: radial-gradient( #0fa 80%, rgba(255, 255, 255, 0.849) 20% );
+}
+
+.fade{
+    animation-name: fade;
+    animation-duration: 15s;
+}
+
+@keyframes fade{
+   0% {opacity: 0;}
+   15% {opacity: 1;}
+   80%{opacity: 1;}
+   100%{opacity: 0;}
+   
+}
+

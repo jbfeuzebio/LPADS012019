@@ -101,7 +101,7 @@ header .menu li a:hover::before{
         transition: 0.2s;
     }
 }
-@media (max-width: 782px){
+@media (max-width: 782px){ /* INICIO MOBILE */
     #botaoMobile{
         display: flex;
         padding: 1.0vh 1.0vh;

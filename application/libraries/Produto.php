@@ -47,11 +47,19 @@
         }
 
         public function exibe_produto($produto){
-            $html = '
+            $html = '<div class="cardProduto">
                     <img src="'.base_url($produto->nome_imagem).'" alt='.$produto->nome_imagem.' />
                     <br/>
-                    <h5>'.$produto->nome_prod.'</h5>
-                    <h5>'.$produto->descricao_produto.'</h5> 
+                    <div class= "infoProduto">
+                    <h5 class="nomeProduto">'.$produto->nome_prod.'</h5>
+                    <br/>
+                    <h5 class="precoProduto">R$'.$produto->preco.'</h5>
+                    </div>
+                    <div class="botoes">
+                    <button id="comprar" class="botaoProduto">comprar</button>
+                    <button id="detalhes" class="botaoProduto">detalhes</button>
+                    </div> 
+                    </div>
                     ' ;
             return $html;
         }

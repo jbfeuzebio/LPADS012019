@@ -15,7 +15,7 @@ class ControllerLoja extends CI_Controller {
 		$this->load->view('componentes/header');
 		$this->load->view('componentes/nav');
 		$this->load->view('loja/promocoes');
-		$this->load->view('componentes/teste', $dados);
+		$this->load->view('loja/produtos', $dados);
 		$this->load->view('componentes/footer');
 	}
 	
