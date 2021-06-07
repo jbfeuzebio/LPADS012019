@@ -1,14 +1,35 @@
-section .sessaoProdutos{
-    margin-top: 2vh;
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-size: 2.0vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.sessaoProdutos{
+    top: 2vh;
+    position: relative;
+}
+
+.sessaoProdutos .tituloSessao{
+    text-align: center;
+}
+
+.sessaoProdutos .tituloSessao h1{
+    color:#0fa;
+    font-size: 3vh;
+    font-family: monospace;
 }
 
 .gridProdutos{
     display: grid;
+    
 }
 
 .cardProduto{
     background-color: rgba(230, 230, 230, 0.384);
-    max-width: 30vh;
+    max-width: 25vh;
     margin: 2vh;
     box-shadow: 0 0 2vh 0 rgba(0, 0, 0, 0.37);
     transition: 0.3s;
@@ -23,8 +44,8 @@ section .sessaoProdutos{
 }
 
 .cardProduto img{
-    max-width: 30vh;
-    max-height: 35vh;
+    max-width: 13vh;
+    max-height: 23vh;
 }
 
 .infoProduto{

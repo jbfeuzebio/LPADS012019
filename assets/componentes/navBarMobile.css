@@ -69,6 +69,7 @@ header .menu li a{
 }
 
 header .menu li a:hover{
+    cursor: pointer;
     color: #0fa;
     text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
 }

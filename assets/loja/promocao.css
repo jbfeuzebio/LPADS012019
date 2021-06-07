@@ -19,6 +19,7 @@
 }
 
 .promocao img{
+    max-width: 100vw;
     width: 100vw;
 }
 
@@ -32,8 +33,6 @@
 }
 
 .botaoPonto{
- 
- cursor: pointer;
   height: .6vw;
   width: .6vw;
   margin: 0 1vh;
