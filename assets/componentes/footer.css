@@ -7,18 +7,20 @@
 
 }
 
-body{
-    position: relative;
-}
-
 .rodape{
-    position: absolute;
-    bottom: 0vh;
+    position: static;
+    bottom: 0px;
     width: 100%;
-    background-color: black;
-    padding: 2.5vh 0;
+    background-color:rgba(0, 0, 0, 0.945);
+    box-shadow: 0 0 3vh 0 #0fa, 0 0 20vh 0 white;
     color: white;
     display: flex;
     justify-content: space-around;
+    z-index: -45456;
+    border-top: 0.05vh solid white;
     
+}
+
+.rodape a{
+    color:white
 }

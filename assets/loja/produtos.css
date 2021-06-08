@@ -8,29 +8,61 @@
 
 
 .sessaoProdutos{
-    top: 2vh;
+    top: 4vh;
+    bottom: 4vh;
     position: relative;
 }
 
 .sessaoProdutos .tituloSessao{
     text-align: center;
+    padding: 0 .5vh;
 }
 
 .sessaoProdutos .tituloSessao h1{
-    color:#0fa;
-    font-size: 3vh;
-    font-family: monospace;
+    color: white;
+    font-size: 7vh;
+    font-family: "Yellowtail", sans-serif;
+    animation: flicker  4s infinite alternate;
+    font-weight:900;
 }
 
+@keyframes flicker {
+    
+    0%, 18%, 22%, 25%, 53%, 57%, 70%, 100% {
+  
+        text-shadow:
+        0 0 2px rgba(255, 255, 255, 0.904),
+        0 0 11px rgba(255, 255, 255, 0.788),
+        0 0 19px rgba(255, 255, 255, 0.452),
+        0 0 40px #0fa,
+        0 0 80px #0fa,
+        0 0 90px #0fa,
+        0 0 100px #0fa,
+        0 0 150px #0fa;
+    
+    }
+    
+    20%, 24%, 55%, 65%, 90% {        
+        text-shadow: none;
+    }    
+  }
+  
 .gridProdutos{
     display: grid;
+    grid-template-columns: repeat(4, auto);
+    max-width: 25vh;
+    margin: 2vh 10vw;
+    grid-column-gap: 8vw;
+    grid-row-gap: 8vh;
+    position: relative;
+    bottom: 0px;
     
 }
 
 .cardProduto{
     background-color: rgba(230, 230, 230, 0.384);
     max-width: 25vh;
-    margin: 2vh;
+    width: 25vh;
     box-shadow: 0 0 2vh 0 rgba(0, 0, 0, 0.37);
     transition: 0.3s;
     position: relative;
@@ -44,39 +76,44 @@
 }
 
 .cardProduto img{
-    max-width: 13vh;
-    max-height: 23vh;
+    max-width: 25vh;
+    width: 25vh;
+    max-height: 30vh;
+    height: 30vh;
 }
 
 .infoProduto{
-    display:flex;
-    justify-content: center;
+    display:block;
+    text-align: center;
     position: relative;
-    padding: 1vh 0;
+    margin: .05vh;
+    max-width: 25vh;
+    width: 25vh;
 }
 
 .nomeProduto{
     color:black;
     font-size: 2vh;
     font-family: monospace;
-    position: absolute;
+    position: relative;
+    max-width: 25vh;
 }
 
 .precoProduto{
-    position: absolute;
-    top: 3vh;
+    position: relative;
     color:rgba(43, 43, 43, 0.788);
     font-family: monospace;
     font-weight: bold;
 }
 
-.botoes{
+.cardProduto .botoes{
     position: relative;
     padding: 3vh 0;
+    bottom: 0px;
 
 }
 
-.botoes .botaoProduto{
+ .cardProduto .botoes .botaoProduto{
     width:50%;
     border: 0vh;
     position:absolute;
