@@ -2,7 +2,7 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" contenta="width=device-width, initial-scale=1">
     </head>
 <body>
     <header>
@@ -15,7 +15,7 @@
 
         <input type="text" id="Descricao_prod" name="descricao_produto" placeholder="Descrição Produto">
 
-        <input type="number" id="Preco" name="preco" placeholder="Preço">
+        <input type="number" step="0.01" id="Preco" name="preco" placeholder="Preço">
 
         <input type="number" id="Qtd_prod" name="qtd_produto_estoque" placeholder="Quantidade produto estoque:">
 

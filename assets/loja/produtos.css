@@ -13,12 +13,12 @@
     position: relative;
 }
 
-.sessaoProdutos .tituloSessao{
+.tituloSessao{
     text-align: center;
     padding: 0 .5vh;
 }
 
-.sessaoProdutos .tituloSessao h1{
+.tituloSessao h1{
     color: white;
     font-size: 7vh;
     font-family: "Yellowtail", sans-serif;
@@ -50,22 +50,23 @@
 .gridProdutos{
     display: grid;
     grid-template-columns: repeat(4, auto);
-    max-width: 25vh;
-    margin: 2vh 10vw;
-    grid-column-gap: 8vw;
     grid-row-gap: 8vh;
     position: relative;
     bottom: 0px;
-    
+    margin: auto 10vh;
+    transition: 0.3s;
 }
 
 .cardProduto{
     background-color: rgba(230, 230, 230, 0.384);
     max-width: 25vh;
     width: 25vh;
+    height: 43vh;
+    max-height: 43vh;
     box-shadow: 0 0 2vh 0 rgba(0, 0, 0, 0.37);
     transition: 0.3s;
     position: relative;
+    margin: auto;
     
 }
 
@@ -86,17 +87,19 @@
     display:block;
     text-align: center;
     position: relative;
-    margin: .05vh;
+    margin: 1vh .05vh;
     max-width: 25vh;
     width: 25vh;
+    height: 7vh;
+   
 }
 
 .nomeProduto{
     color:black;
     font-size: 2vh;
-    font-family: monospace;
+    font-family: "Helvetica";
     position: relative;
-    max-width: 25vh;
+    
 }
 
 .precoProduto{
@@ -104,11 +107,12 @@
     color:rgba(43, 43, 43, 0.788);
     font-family: monospace;
     font-weight: bold;
+    bottom: 0px;
 }
 
 .cardProduto .botoes{
-    position: relative;
-    padding: 3vh 0;
+    position: static;
+    padding: 2vh 0;
     bottom: 0px;
 
 }
@@ -131,7 +135,6 @@
 }
 
 #comprar:hover{
-    left: 0px;
     background-color: #0fa;
     color: white;
     text-shadow: 0 0 2vh 0 white;
@@ -147,3 +150,20 @@
   box-shadow: 0 0 1vh 0 black;
 }
 
+@media (max-width: 1400px){
+    .gridProdutos{
+        grid-template-columns: repeat(3, auto);
+    }
+}
+
+@media (max-width: 1100px){
+    .gridProdutos{
+        grid-template-columns: repeat(2, auto);
+    }
+}
+
+@media (max-width: 782px){
+    .gridProdutos{
+        grid-template-columns: auto;
+    }
+}

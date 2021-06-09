@@ -1,4 +1,4 @@
-<section >
+<section>
     <div class="containerPromocao">
     <div class="promocao fade">
         <img  class ="" src ="<?= base_url('imagens/loja/promocoes/promocao1.svg') ?>" alt="logoloja" />
@@ -16,3 +16,4 @@
     </div>
 </div>
 </section>
+<br />
