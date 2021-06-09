@@ -63,7 +63,7 @@
     width: 25vh;
     height: 43vh;
     max-height: 43vh;
-    box-shadow: 0 0 2vh 0 rgba(0, 0, 0, 0.37);
+    box-shadow: 0 0 2.5vh 0 rgb(0, 0, 0);
     transition: 0.3s;
     position: relative;
     margin: auto;
@@ -71,7 +71,7 @@
 }
 
 .cardProduto:hover{
-    box-shadow: 0 0 2vh 0 #0fa;
+    box-shadow: 0 0 2vh 0 white, 0 0 4vh 0 #0fa;
     border: .09vh solid rgba(0, 255, 170, 0.568);
     border-radius: 0.25em;
 }
@@ -99,6 +99,7 @@
     font-size: 2vh;
     font-family: "Helvetica";
     position: relative;
+
     
 }
 

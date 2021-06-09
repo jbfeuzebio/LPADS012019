@@ -60,3 +60,22 @@
    
 }
 
+@media (max-width: 782px){
+    .botaoPonto{
+        height: .8vw;
+        width: .8vw;
+        margin: 0 1vh;
+        background-color: rgb(143, 143, 143);
+        border-radius: 50%;
+        display: inline-block;
+        position: relative;
+      }
+
+    .promocao img{
+       width: 100%;
+       height: 100vh;
+        
+    }
+
+}
+
