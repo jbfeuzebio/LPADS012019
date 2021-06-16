@@ -10,8 +10,8 @@
 body{
     position: relative;
     display: flex;
-    justify-content: space-around;
     align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     animation: flickerBody 20s infinite normal;
     animation-timing-function: ease-out;
@@ -19,15 +19,128 @@ body{
 }
 
 .containerLogin{
-    background-color: rgba(255, 255, 255, 0.918);
-    position: fixed;
+    background-color: rgba(255, 255, 255, 0.39);
+    position: relative;
     width: 40vh;
     height: 50vh;
     animation: flickerLogin 20s infinite normal;
     animation-timing-function: ease-out;
-    border-radius: 2%;
-   
+    border-radius: 0%;
+    display:block;
+  
 }
+
+.containerLogin h1{
+    font-family: monospace;
+    font-size: 5vh;
+    color: white;
+    position: relative;
+    top: 7vh;
+    left: 10vh;
+    animation: flickerH1 20s infinite normal;
+}
+
+.containerLogin img{
+    width: 4vh;
+    position: absolute;
+    top: 8vh;
+    right: 10vh;
+}
+
+.containerForm{
+    position: absolute;
+    top: 22vh;
+    left: 2.5vh;
+    display: block;
+}
+
+.containerForm input{
+    margin-top: 1.5vh;
+    position: relative;
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-bottom: 0.3vh solid green;
+    width: 35vh;
+    text-align: center;
+    font-family: monospace;
+}
+
+.containerForm input::placeholder{
+    color: white;
+    
+}
+
+.containerForm input:focus{
+    outline: none;
+    border-bottom: 0.3vh solid #0fa;
+    color: #0fa;
+    text-shadow: 0 0 1vh #0fa;
+}
+
+.containerForm input:hover{
+    outline: none;
+    border-bottom: 0.3vh solid #0fa;
+    color: #0fa;
+    text-shadow: 0 0 1vh #0fa;
+}
+
+.containerButton{
+    position: absolute;
+    bottom: 4vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.containerButton button{
+    padding: 0.7vh 0;
+    width: 40%;
+    border: none;
+    border-radius: 5%;
+    font-family: monospace;
+    font-weight: 400;
+}
+
+#botaoLogar{
+    background-color: rgb(33, 199, 177);
+    color:white;
+    transition: 0.5s;
+    
+    
+}
+
+#botaoLogar:hover{
+    background-color: rgb(0, 255, 221);
+}
+
+#botaoCadastrarse{
+    background-color: rgba(255, 42, 202, 0.534);
+    color:rgba(253, 253, 253, 0.979);
+    transition: 0.5s;
+}
+
+#botaoCadastrarse:hover{
+    background-color: rgb(255, 42, 202);
+}
+
+@keyframes flickerH1 {
+    
+    0%, 8.9%, 10%, 19%, 20.1%, 25%, 53%, 56%, 60.3%,  70%, 100%{
+        text-shadow:
+        0 0 1vh white,
+        0 0 3vh #0fa,
+        0 0 6vh rgba(0, 255, 170, 0.582),
+        0 0 10vh black;
+        color: #0fa;
+    }
+    
+    9.5%, 20%, 24.9%, 55%, 60%{        
+        text-shadow: none;
+        color: white;
+    }    
+  }
+
 
 @keyframes flickerLogin {
     

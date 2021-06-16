@@ -12,14 +12,22 @@
         </header>
     <br/>
         <div class="containerLogin">
-            <form method="POST" action="">
-                <input type="text" id="email" name="email" placeholder="Email">
-                <br />
-                <input type="password" id="senha" name="senha" placeholder="Senha">
-                <br />
-                <input type="hidden" class="custom-control-input"  name="nivel_hierarquico" value="0">
-                <button >Registrar</button>
-           </form>
+                    <h1>LojaX</h1>
+                    <img  class ="img" src ="../../../imagens/loja/icone2.svg" alt="logoloja" />
+            <br />
+                <form method="POST" action="">
+                    <div class="containerForm">
+                        <input type="text" id="email" name="email" placeholder="Email: ">
+                    <br />
+                        <input type="password" id="senha" name="senha" placeholder="Senha: ">
+                    <br />
+                        <input type="hidden" class="custom-control-input"  name="nivel_hierarquico" value="0">
+                    </div>
+                    <div class="containerButton">
+                        <button id="botaoLogar">Logar</button><button id="botaoCadastrarse">Cadastrar-se</button>
+                    </div>
+                </form>
+           
         </div>
         <script type="text/javascript" src="../../../assets/componentes/navBarMobile.js"></script>
         <script type="text/javascript" src="../../../assets/loja/promocao.js"></script>
