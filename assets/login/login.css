@@ -1,0 +1,61 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-size: 2.0vh;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+body{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    animation: flickerBody 20s infinite normal;
+    animation-timing-function: ease-out;
+    
+}
+
+.containerLogin{
+    background-color: rgba(255, 255, 255, 0.918);
+    position: fixed;
+    width: 40vh;
+    height: 50vh;
+    animation: flickerLogin 20s infinite normal;
+    animation-timing-function: ease-out;
+    border-radius: 2%;
+   
+}
+
+@keyframes flickerLogin {
+    
+    0%, 8.9%, 10%, 19%, 20.1%, 25%, 53%, 56%, 60.3%,  70%, 100%{
+        box-shadow:
+        0 0 1vh white,
+        0 0 3vh #0fa,
+        0 0 6vh rgba(0, 255, 170, 0.582),
+        0 0 10vh black;
+        border: .09vh solid rgb(0, 255, 170);
+    }
+    
+    9.5%, 20%, 24.9%, 55%, 60%{        
+        box-shadow: none;
+        border: .09vh solid rgba(255, 255, 255, 0.918);
+    }    
+  }
+
+  @keyframes flickerBody {
+
+    0%, 8.9%, 10%, 19%, 20.1%, 25%, 53%, 56%, 60.3%,  70%, 100%{
+        background-image: radial-gradient(rgba(0, 0, 0, 0.856),rgb(0, 0, 0) 55%);
+    }
+    
+    9.5%, 20%, 24.9%, 55%, 60%{        
+        background-image: radial-gradient(rgb(0, 0, 0),rgb(0, 0, 0) 45%);
+    }    
+      
+      
+  }
+  
