@@ -85,6 +85,45 @@ body{
     text-shadow: 0 0 1vh #0fa;
 }
 
+.containerFormCadastro{
+    position: absolute;
+    top: 18vh;
+    left: 2.5vh;
+    display: block;
+}
+
+.containerFormCadastro input{
+    margin-top: 1.5vh;
+    position: relative;
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-bottom: 0.3vh solid green;
+    width: 35vh;
+    text-align: center;
+    font-family: monospace;
+}
+
+.containerFormCadastro input::placeholder{
+    color: white;
+    
+}
+
+.containerFormCadastro input:focus{
+    outline: none;
+    border-bottom: 0.3vh solid #0fa;
+    color: #0fa;
+    text-shadow: 0 0 1vh #0fa;
+}
+
+.containerFormCadastro input:hover{
+    outline: none;
+    border-bottom: 0.3vh solid #0fa;
+    color: #0fa;
+    text-shadow: 0 0 1vh #0fa;
+}
+
+
 .containerButton{
     position: absolute;
     bottom: 4vh;
@@ -162,7 +201,7 @@ body{
   @keyframes flickerBody {
 
     0%, 8.9%, 10%, 19%, 20.1%, 25%, 53%, 56%, 60.3%,  70%, 100%{
-        background-image: radial-gradient(rgba(0, 0, 0, 0.856),rgb(0, 0, 0) 55%);
+        background-image: radial-gradient(rgba(0, 0, 0, 0.856) 5%,rgb(0, 0, 0) 55%);
     }
     
     9.5%, 20%, 24.9%, 55%, 60%{        
