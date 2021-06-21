@@ -1,0 +1,139 @@
+.containerFormProd{
+    font-family: monospace;
+    font-size: 2vh;
+    background-color: white;
+    position: relative;
+    width: 60vh;
+    height: 60vh;
+    top: 10vh;
+    box-shadow: 0vh 4vh 4vh 0 black;
+    margin: auto;
+}
+
+.containerInputProd{
+    position: absolute;
+    top: 15vh;
+    left: 9vh;
+}
+
+.containerFormProd h1{
+    color: rgba(0, 0, 0, 0.801);
+    font-size: 7vh;
+    font-family: "Yellowtail", sans-serif;
+    animation: flicker  4s infinite alternate;
+    font-weight:900;
+    text-align: center;
+    padding-top: 4vh;
+}
+
+@keyframes flicker {
+    
+    0%, 18%, 22%, 25%, 53%, 57%, 70%, 100% {
+  
+        text-shadow:
+        0 0 2px rgba(255, 255, 255, 0.904),
+        0 0 11px rgba(255, 255, 255, 0.788),
+        0 0 19px rgba(255, 255, 255, 0.452),
+        0 0 5px #0fa,
+        0 0 10px #0fa,
+        0 0 30px #0fa,
+        0 0 40px #0fa,
+        0 0 50px #0fa;
+    
+    }
+    
+    20%, 24%, 55%, 65%, 90% {        
+        text-shadow: none;
+    }    
+  }
+
+.containerInputProd input{
+    margin-top: 2vh;
+    position: relative;
+    background-color: transparent;
+    color: black;
+    border: none;
+    border-bottom: 0.3vh solid green;
+    width: 40vh;
+    text-align: center;
+    font-family: monospace;
+}
+
+.containerInputProd input::placeholder{
+    color:black;
+}
+
+.containerInputProd input:focus{
+    outline: none;
+    border-bottom: 0.3vh solid #0fa;
+    color: black;
+    box-shadow: 0vh 0.1vh 0.1vh 0vh white;
+}
+
+.containerInputProd input:hover{
+    outline: none;
+    border-bottom: 0.3vh solid #0fa;
+    color: black;
+    box-shadow: 0vh 0.1vh 0.1vh 0vh white;
+}
+
+.containerInputProd select{
+    margin-top: 2vh;
+    background-color: transparent;
+    border: none;
+    border-bottom: 0.3vh solid green;
+    width: 40vh;
+    text-align: center;
+    font-family: monospace;
+    text-align-last: center;
+}
+
+
+.containerInputProd select option{
+    font-family: monospace;
+}
+
+.containerInputProd #preco{
+    width: 20vh;
+    
+}
+
+.containerInputProd #qtd_prod{
+    width: 19.5vh;
+   
+}
+
+.containerInputProd input[type=file]{
+    font-size: 1.5vh;
+}
+
+.containerButtonProd{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 5vh;
+    display: flex;
+}
+
+.containerButtonProd button{
+    width: 50%;
+    border: none;
+    background-color: rgba(0, 255, 170, 0.623);
+    color: rgb(0, 0, 0);
+    font-family: monospace;
+}
+
+.containerButtonProd button:hover{
+    background-color: rgba(0, 255, 170, 0.904);
+    
+}
+
+.containerButtonProd input[type=reset]{
+    width: 50%;
+    border: none;
+    font-family: monospace;
+}
+
+.containerButtonProd input[type=reset]:hover{
+    border: 1px solid black;
+}
