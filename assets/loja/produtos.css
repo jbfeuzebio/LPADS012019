@@ -1,0 +1,170 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-size: 2.0vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.sessaoProdutos{
+    top: 4vh;
+    bottom: 4vh;
+    position: relative;
+}
+
+.tituloSessao{
+    text-align: center;
+    padding: 0 .5vh;
+}
+
+.tituloSessao h1{
+    color: white;
+    font-size: 7vh;
+    font-family: "Yellowtail", sans-serif;
+    animation: flicker  4s infinite alternate;
+    font-weight:900;
+}
+
+@keyframes flicker {
+    
+    0%, 18%, 22%, 25%, 53%, 57%, 70%, 100% {
+  
+        text-shadow:
+        0 0 2px rgba(255, 255, 255, 0.904),
+        0 0 11px rgba(255, 255, 255, 0.788),
+        0 0 19px rgba(255, 255, 255, 0.452),
+        0 0 40px #0fa,
+        0 0 80px #0fa,
+        0 0 90px #0fa,
+        0 0 100px #0fa,
+        0 0 150px #0fa;
+    
+    }
+    
+    20%, 24%, 55%, 65%, 90% {        
+        text-shadow: none;
+    }    
+  }
+  
+.gridProdutos{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-row-gap: 8vh;
+    position: relative;
+    bottom: 0px;
+    margin: auto 10vh;
+    transition: 0.3s;
+}
+
+.cardProduto{
+    background-color: rgba(230, 230, 230, 0.384);
+    max-width: 25vh;
+    width: 25vh;
+    height: 43vh;
+    max-height: 43vh;
+    box-shadow: 0 0 2.5vh 0 rgb(0, 0, 0);
+    transition: 0.3s;
+    position: relative;
+    margin: auto;
+    
+}
+
+.cardProduto:hover{
+    box-shadow: 0 0 2vh 0 white, 0 0 4vh 0 #0fa;
+    border: .09vh solid rgba(0, 255, 170, 0.568);
+    border-radius: 0.25em;
+}
+
+.cardProduto img{
+    max-width: 25vh;
+    width: 25vh;
+    max-height: 30vh;
+    height: 30vh;
+}
+
+.infoProduto{
+    display:block;
+    text-align: center;
+    position: relative;
+    margin: 1vh .05vh;
+    max-width: 25vh;
+    width: 25vh;
+    height: 7vh;
+   
+}
+
+.nomeProduto{
+    color:black;
+    font-size: 2vh;
+    font-family: "Helvetica";
+    position: relative;
+
+    
+}
+
+.precoProduto{
+    position: relative;
+    color:rgba(43, 43, 43, 0.788);
+    font-family: monospace;
+    font-weight: bold;
+    bottom: 0px;
+}
+
+.cardProduto .botoes{
+    position: static;
+    padding: 2vh 0;
+    bottom: 0px;
+
+}
+
+ .cardProduto .botoes .botaoProduto{
+    width:50%;
+    border: 0vh;
+    position:absolute;
+    bottom: 0vh;
+    padding: 1vh 0;
+    font-size: 1.5vh;
+    color: white;
+    font-family: monospace;
+}
+
+#comprar{
+    left: 0px;
+    background-color: black;
+    transition: 0.2s;
+}
+
+#comprar:hover{
+    background-color: #0fa;
+    color: white;
+    text-shadow: 0 0 2vh 0 white;
+    box-shadow: 0 0 3vh 0 #0fa;
+}
+
+#detalhes{
+    right: 0px;
+    background-color: rgb(83, 83, 83);
+}
+#detalhes:hover{
+  color: black;
+  box-shadow: 0 0 1vh 0 black;
+}
+
+@media (max-width: 1400px){
+    .gridProdutos{
+        grid-template-columns: repeat(3, auto);
+    }
+}
+
+@media (max-width: 1100px){
+    .gridProdutos{
+        grid-template-columns: repeat(2, auto);
+    }
+}
+
+@media (max-width: 782px){
+    .gridProdutos{
+        grid-template-columns: auto;
+    }
+}

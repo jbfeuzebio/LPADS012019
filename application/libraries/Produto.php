@@ -32,14 +32,16 @@
             $res = $this->db->get('produtos');
             $produtos = $res -> result();
             foreach ($produtos as $produto){
+                $produto -> nome_imagem = null;
                 $id_prod = $produto->id_produto;
                 foreach($lista_imagens_produtos as $imagem){
                     $id_produto_imagem = $imagem->id_produto;
                     if($id_produto_imagem == $id_prod){
                         $produto -> nome_imagem = $imagem->nome_imagem;
-                    }else{
-                        $produto -> nome_imagem = './imagens/produtos/default_produto.jpg';
                     }
+                }
+                if($id_produto_imagem == null){
+                    $produto -> nome_imagem = './imagens/produtos/default_produto.jpg';
                 }
                 $html .= $this->exibe_produto($produto);
             }
@@ -47,11 +49,18 @@
         }
 
         public function exibe_produto($produto){
-            $html = '
+            $html = '<div class="cardProduto">
                     <img src="'.base_url($produto->nome_imagem).'" alt='.$produto->nome_imagem.' />
                     <br/>
-                    <h5>'.$produto->nome_prod.'</h5>
-                    <h5>'.$produto->descricao_produto.'</h5> 
+                    <div class= "infoProduto">
+                    <h5 class="nomeProduto">'.$produto->nome_prod.'</h5>
+                    <h5 class="precoProduto">R$'.$produto->preco.'</h5>
+                    </div>
+                    <div class="botoes">
+                    <button id="comprar" class="botaoProduto">comprar</button>
+                    <button id="detalhes" class="botaoProduto">detalhes</button>
+                    </div> 
+                    </div>
                     ' ;
             return $html;
         }
