@@ -34,7 +34,7 @@
 				<td><h3>Cadastro de usuário (cliente)</h3></td>
 			</tr>
 			<tr>
-				<td><img src="/imagens/printssitema/lojaAtualizada1.png"/></td>
+				<td><img src="/imagens/printssitema/lojaAtualizada.png"/></td>
 				<td><img src="/imagens/printssitema/lojaAtualizada2.png"/></td>
 				<td><img src="/imagens/printssitema/loginAtualizado.png"/></td>
 				<td><img src="/imagens/printssitema/registerAtualizado.png"/></td>
