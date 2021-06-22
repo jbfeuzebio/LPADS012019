@@ -34,8 +34,8 @@
 				<td><h3>Cadastro de usuário (cliente)</h3></td>
 			</tr>
 			<tr>
-				<td><img src="/imagens/printssitema/lojaAtualizado1.png"/></td>
-				<td><img src="/imagens/printssitema/lojaAtualizado2.png"/></td>
+				<td><img src="/imagens/printssitema/lojaAtualizada1.png"/></td>
+				<td><img src="/imagens/printssitema/lojaAtualizada2.png"/></td>
 				<td><img src="/imagens/printssitema/loginAtualizado.png"/></td>
 				<td><img src="/imagens/printssitema/registerAtualizado.png"/></td>
 			</tr>
@@ -46,8 +46,8 @@
 				<td><h3>Cadastro de usuário (cliente) Mobile</h3></td>
 			</tr>
 			<tr>
-				<td><img src="/imagens/printssitema/lojaAtualizadoMobile1.png"/></td>
-				<td><img src="/imagens/printssitema/lojaAtualizadoMobile2.png"/></td>
+				<td><img src="/imagens/printssitema/lojaAtualizadaMobile1.png"/></td>
+				<td><img src="/imagens/printssitema/lojaAtualizadaMobile2.png"/></td>
 				<td><img src="/imagens/printssitema/loginAtualizadoMobile.png"/></td>
 				<td><img src="/imagens/printssitema/registerAtualizadoMobile.png"/></td>
 			</tr>
