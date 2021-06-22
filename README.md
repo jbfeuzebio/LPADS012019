@@ -24,6 +24,36 @@
 		</ul>
 	<br/>
 	<center>
+				<h2>Telas do sistema - Versão atual</h2>
+			</center>
+		<table border="0px">
+			<tr>
+				<td><h3>Loja</h3></td>
+				<td><h3>Loja footer</h3></td>
+				<td><h3>Login</h3></td>
+				<td><h3>Cadastro de usuário (cliente)</h3></td>
+			</tr>
+			<tr>
+				<td><img src="/imagens/printssitema/lojaAtualizado1.png"/></td>
+				<td><img src="/imagens/printssitema/lojaAtualizado2.png"/></td>
+				<td><img src="/imagens/printssitema/loginAtualizado.png"/></td>
+				<td><img src="/imagens/printssitema/registerAtualizado.png"/></td>
+			</tr>
+			<tr>
+				<td><h3>Loja Mobile</h3></td>
+				<td><h3>Loja footer Mobile</h3></td>
+				<td><h3>Login Mobile</h3></td>
+				<td><h3>Cadastro de usuário (cliente) Mobile</h3></td>
+			</tr>
+			<tr>
+				<td><img src="/imagens/printssitema/lojaAtualizadoMobile1.png"/></td>
+				<td><img src="/imagens/printssitema/lojaAtualizadoMobile2.png"/></td>
+				<td><img src="/imagens/printssitema/loginAtualizadoMobile.png"/></td>
+				<td><img src="/imagens/printssitema/registerAtualizadoMobile.png"/></td>
+			</tr>
+			</table> 
+		<br />
+	<center>
 		<h2>Funções na versão antiga</h2>
 	</center>
 		<ul type="square">
