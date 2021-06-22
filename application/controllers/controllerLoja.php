@@ -54,7 +54,7 @@ class ControllerLoja extends CI_Controller {
 		$this->usuarioModel->deletar_usuario();
 	}
 
-	public function cadastra_produto(){
+	public function cadastrar_produto(){
 		$this->load->model('ProdutoModel','produtoModel');
 		$this->produtoModel->cadastra_produto();
 		$this->load->helper('url');

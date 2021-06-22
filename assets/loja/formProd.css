@@ -137,3 +137,40 @@
 .containerButtonProd input[type=reset]:hover{
     border: 1px solid black;
 }
+
+@media (max-width: 782px){
+   
+    .containerFormProd{
+        width: 40vh;
+    }
+
+    .containerFormProd h1{
+        font-size: 5vh;
+    }
+ 
+    .containerInputProd{
+        left: 5vh;
+    }
+
+    .containerInputProd input{
+        width: 30vh;
+    }
+
+    .containerInputProd #preco{
+        width: 30vh;
+        
+    }
+    
+    .containerInputProd #qtd_prod{
+        width: 30vh;
+       
+    }
+
+    .containerInputProd select{
+        width: 30vh;
+    }
+    
+    .containerInputProd input[type=file]{
+        font-size: 1.2vh;
+    }
+}
