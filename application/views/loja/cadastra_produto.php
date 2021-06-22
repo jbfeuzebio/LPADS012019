@@ -1,7 +1,6 @@
-<div>
     <div class="containerFormProd">
         <h1>Cadastrar Produto</h1>  
-        <form enctype="multipart/form-data" action="<?= base_url('ControllerLoja/cadastra_produto')?>" method="POST">
+        <form enctype="multipart/form-data" action="<?= base_url('ControllerLoja/cadastrar_produto')?>" method="POST">
             <div class="containerInputProd">
                 <input type="text" id="Nome_prod" name="nome_prod" placeholder="Nome Produto:">
             <br />
@@ -26,4 +25,3 @@
             </div>
         </form>
     </div>
-</div>
